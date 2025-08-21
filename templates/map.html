@@ -68,6 +68,10 @@
             window.Telegram.WebApp.expand();
         } else {
               alert("Telegram WebApp NOT detected");
+                      window.parent.postMessage({
+            type: "web_app_data_send",
+            data: JSON.stringify(data)
+        }, "*");
         }
     </script>
 </body>
