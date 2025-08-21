@@ -38,14 +38,17 @@
             marker = L.marker(e.latlng).addTo(map);
             selectedCoords = e.latlng;
             
+            // Показываем координаты
             document.getElementById('coords-text').textContent = 
                 `${e.latlng.lat.toFixed(6)}, ${e.latlng.lng.toFixed(6)}`;
             document.getElementById('coordinates').classList.remove('hidden');
             
+            // Показываем кнопку Telegram "Добавить"
             if (window.Telegram && window.Telegram.WebApp) {
-                window.Telegram.WebApp.MainButton.setText("Сохранить точку");
+                window.Telegram.WebApp.MainButton.setText("Добавить точку");
                 window.Telegram.WebApp.MainButton.show();
                 
+                // Обработчик кнопки
                 window.Telegram.WebApp.MainButton.onClick(() => {
                     if (selectedCoords) {
                         const data = {
@@ -58,6 +61,7 @@
             }
         });
 
+        // Инициализация Telegram WebApp
         if (window.Telegram && window.Telegram.WebApp) {
             window.Telegram.WebApp.ready();
             window.Telegram.WebApp.expand();
