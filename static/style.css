@@ -1,0 +1,56 @@
+/* Обязательные стили для Leaflet */
+#map {
+    height: 70vh;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+/* Убедись, что карта видна */
+#map {
+    background: #f0f0f0; /* fallback если тайлы не загрузятся */
+}
+
+/* Остальные стили */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--tg-theme-bg-color, #ffffff);
+    color: var(--tg-theme-text-color, #000000);
+}
+
+.container {
+    padding: 16px;
+    max-width: 100%;
+}
+
+h2 {
+    margin-top: 0;
+    color: var(--tg-theme-text-color, #000000);
+}
+
+#coordinates {
+    padding: 12px;
+    background-color: var(--tg-theme-secondary-bg-color, #f0f0f0);
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+#coordinates.hidden {
+    display: none;
+}
+
+#coords-text {
+    font-weight: bold;
+    color: var(--tg-theme-link-color, #229ed9);
+}
+
+/* Стили для Telegram WebApp */
+.tg-main-button {
+    position: fixed;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+}
