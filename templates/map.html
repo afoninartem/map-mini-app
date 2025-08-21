@@ -63,8 +63,11 @@
 
         // Инициализация Telegram WebApp
         if (window.Telegram && window.Telegram.WebApp) {
+            alert("Telegram WebApp detected");
             window.Telegram.WebApp.ready();
             window.Telegram.WebApp.expand();
+        } else {
+              alert("Telegram WebApp NOT detected");
         }
     </script>
 </body>
